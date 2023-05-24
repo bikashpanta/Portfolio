@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bikash Panta | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="hamburger">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <ul id="navbar-flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume </a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main id="resume">
+        <h1 style="color: orangered;font-size:4rem;margin-top:4rem">Download Resume</h1>
+        <p  style="font-size: 2rem;">Click the link below to download my resume:</p>
+        <a href="bikash.pdf" download style="font-size: 1.5rem; ">Download Resume</a>
+        </section>
+
+        <footer>
+            <p>© 2023 Bikash Panta</p>
+        </footer>
+    </main>
+</body>
+<style>
+
+</style>
+<script>
+    document.querySelector("#hamburger").addEventListener("click", () => {
+        document.querySelector("header nav ul").classList.toggle("flex")
+    })
+</script>
+
+</html>

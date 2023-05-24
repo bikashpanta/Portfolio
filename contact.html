@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bikash Panta | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="hamburger">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <ul id="navbar-flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume </a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <style>
+
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var errorMessage = document.getElementById('error-message');
+
+            if (name === '' || email === '' || message === '') {
+                errorMessage.textContent = 'Please fill in all fields.';
+                return false;
+            }
+            errorMessage.textContent = '';
+            return true;
+        }
+    </script>
+    <div class="container-wrapper">
+
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="my-form" action="https://formspree.io/f/mqkoopvv" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Name:</label>
+                <input type="text" name="name" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+            </form>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div class="contacts">
+
+            <h3> Social Links</h3>
+            <a href="https://www.facebook.com/bikash.panta.754" target="_blank">
+                <img src="https://www.svgrepo.com/show/487112/brand-fb-sq.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/bikashpanta57/" target="_blank">
+                <img src="https://www.svgrepo.com/show/512399/instagram-167.svg" alt="">
+            </a>
+            <a href="https://github.com/bikashpanta" target="_blank">
+                <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="">
+            </a>
+            <a href="https://twitter.com/BikashPanta57" target="_blank">
+                <img src="https://www.svgrepo.com/show/513008/twitter-154.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2023 Bikash Panta</p>
+    </footer>
+</body>
+<script>
+    document.querySelector("#hamburger").addEventListener("click", () => {
+        document.querySelector("header nav ul").classList.toggle("flex")
+    })
+</script>
+<script>
+    let form = document.getElementById("my-form");
+    let status = document.getElementById("my-form-status");
+    let button = document.getElementById("my-form-button");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var data = new FormData(form);
+        button.disabled = true;
+        status.innerHTML = "Sending...";
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            button.disabled = false;
+            if (xhr.status === 200) {
+                form.reset();
+                status.innerHTML = "Thanks for your submission!";
+                alert("Form Submitted Succeffully.")
+            } else {
+                var response = JSON.parse(xhr.responseText);
+                if (response.message) {
+                    status.innerHTML = response.message;
+                } else if (response.error) {
+                    status.innerHTML = "Error: " + response.error;
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            }
+        };
+        xhr.send(data);
+    });
+</script>
+
+</html>

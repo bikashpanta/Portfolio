@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bikash Panta | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="hamburger">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <ul id="navbar-flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume </a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <section id="education" class="container" style="margin: 8rem 0 0 5rem;">
+
+        <h1 style="color: orangered;font-size:2.5rem"> Education </h1>
+        <h3> SEE </h3>
+        <p> Sunrise Secondary School , Sarlahi, Nepal </p>
+        <span> 2018 </span>
+
+        <h3> +2 </h3>
+        <p> Loyola College , Kathmandu , Nepal </p>
+        <span> 2021 </span>
+
+
+        <h3> Bachelors </h3>
+        <p> Wenworth Institute of Higher Education , Australia </p>
+        <span> Current </span>
+
+    </section>
+
+    <footer>
+        <p>© 2023 Bikash Panta</p>
+    </footer>
+</body>
+<style>
+
+</style>
+<script>
+    document.querySelector("#hamburger").addEventListener("click", () => {
+        document.querySelector("header nav ul").classList.toggle("flex")
+    })
+</script>
+
+</html>

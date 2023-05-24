@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bikash Panta | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="hamburger">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#ffff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <ul id="navbar-flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume </a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main id="home">
+        <section>
+            <div id="intro-text">
+                <h1>I am <br> Bikash Panta</h1>
+                <p>"Welcome to my website! My name is Bikash Panta, and I'm passionate about web designing. With a keen
+                    interest in computers and all things digital, I've dedicated myself to creating visually appealing
+                    and user-friendly websites.
+
+                    Based in Australia, I've honed my skills in web development and design over the years. I thrive on
+                    the challenges that come with crafting unique online experiences and bringing ideas to life.
+
+                    On this website, you'll find information about me, my skills, and my professional experience. I have
+                    a strong educational background in computer science, which has provided a solid foundation for my
+                    career in the tech industry.
+
+                    "</p>
+            </div>
+            <div class="img-wrapper">
+                <h1 style="display: none;">I am <br> Bikash Panta</h1>
+                <img src="img/bikash.png" alt="Professional Headshot">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Bikash Panta</p>
+    </footer>
+</body>
+<style>
+
+</style>
+<script>
+    document.querySelector("#hamburger").addEventListener("click", () => {
+        document.querySelector("header nav ul").classList.toggle("flex")
+    })
+</script>
+
+</html>
